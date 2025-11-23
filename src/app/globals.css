@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFEE;
+  --foreground: #000000;
+  --post-bg: #FFFFFF;
+  --post-hover: #F0E0D6;
+  --border: #000000;
 }
 
 @theme inline {
@@ -12,15 +15,103 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Estilos para el contenido de los posts (markdown) */
+.prose {
+  color: #000000;
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #880000;
+}
+
+.prose h1 {
+  font-size: 1.5em;
+}
+
+.prose h2 {
+  font-size: 1.3em;
+}
+
+.prose h3 {
+  font-size: 1.1em;
+}
+
+.prose ul,
+.prose ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose code {
+  background-color: #F0E0D6;
+  padding: 2px 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  background-color: #F0E0D6;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+  border: 1px solid #000000;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.prose a {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #0000CC;
+}
+
+.prose blockquote {
+  border-left: 3px solid #000000;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  margin: 1em 0;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 2em 0;
 }
