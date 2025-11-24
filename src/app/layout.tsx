@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "/blog/ - Blog Personal",
+  title: "RNDchan - Blog Personal",
   description: "Un blog sobre tecnología, educación, aprendizaje y más",
 };
 
